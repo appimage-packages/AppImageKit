@@ -65,9 +65,9 @@ make clean
 make
 
 version="$(git describe --tags)"
-outdir="$PWD/out"
+outdir="$PWD/app"
 
-mkdir -p "$outdir"
+#mkdir -p "$outdir"
 
 for i in AppRun; do
 	[ -f "$i" ] && cp -v "$i" "${outdir}/${i}_${version}-$(uname -m)"
